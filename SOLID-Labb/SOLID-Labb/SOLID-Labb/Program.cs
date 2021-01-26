@@ -7,18 +7,15 @@ namespace SOLID_Labb
         static void Main(string[] args)
         {
             Animal[] animals = {new Dog("Black"),
-                            new Hedgehog("Pink"),
-                            new Bird("Yellow")};
+                            new Hedgehog("Brown"),
+                            new Bird("Red")};
 
             Console.WriteLine("###############");
             Console.WriteLine();
 
             foreach (var animal in animals)
             {
-                if (animal is Dog dog)
-                {
-                    dog.TransferOwnership("Niklas");
-                }
+                Ownership.TransferOwner();
 
                 animal.Eat();
                 animal.Sleep();
